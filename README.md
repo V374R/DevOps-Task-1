@@ -5,8 +5,8 @@ Prerequisites:
 
 1. Ensure the target machine has Ubuntu or a compatible Linux distribution installed.
 2. Make sure you system is up-to-date, by running:
-  #sudo apt-get update
-  #sudo apt-get upgrade  
+  $sudo apt-get update
+  $sudo apt-get upgrade  
 3. sure the machine has Docker installed and running.
   #sudo apt install -y docker.io
   #sudo systemctl enable --now docker

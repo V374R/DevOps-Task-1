@@ -24,7 +24,7 @@ Prerequisites:
 2. Clone the Git repository containing the Flask application and Docker configurations.
 3. Change into the project directory using the following command:
 
-      #git clone https://github.com/V374R/DevOps-Task-1.git
+      #sudo git clone https://github.com/V374R/DevOps-Task-1.git
       #cd DevOps-Task-1
 
 
@@ -48,7 +48,7 @@ To start using the virtual environment, you need to activate it.
 
 1. In the project directory, where the Dockerfile is located, build the Docker image using the following command:
    
-      #docker build -t my_flask_app .
+      #sudo docker build -t my_flask_app .
 
 
   Step 5: Set Up PostgreSQL Data Volume:
@@ -63,7 +63,7 @@ To start using the virtual environment, you need to activate it.
 
   Step 6: Run the Docker and Postgres containers:
 
-      #chmod +x ./flask.sh
+      #sudo chmod +x ./flask.sh
       #sudo ./flask.sh
 
 

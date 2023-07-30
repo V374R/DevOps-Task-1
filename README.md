@@ -1,5 +1,5 @@
 # DevOps-Task-1
-Deploying a Dockerized Flask Application on Ubuntu Server
+Deploying a Dockerized Flask Application on Ubuntu Server Instructions
 
 Prerequisites:
 -

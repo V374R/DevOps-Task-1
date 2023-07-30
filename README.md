@@ -8,14 +8,14 @@ Prerequisites:
   $sudo apt-get update
   $sudo apt-get upgrade  
 3. sure the machine has Docker installed and running.
-  #sudo apt install -y docker.io
-  #sudo systemctl enable --now docker
-  #sudo usermod -aG docker $Username
+  $sudo apt install -y docker.io
+  $sudo systemctl enable --now docker
+  $sudo usermod -aG docker $Username
 4. Install python.
    Ensure that Python is installed on your machine. If not, download and install the latest version of Python from the official Python website (https://www.python.org/).
 5. Install Virtualenv:
    Virtualenv is a tool used to create isolated Python environments. You can install it using "pip":
-   #pip install virtualenv
+   $pip install virtualenv
 
 
   Step 1: Clone the Git Repository:
@@ -24,15 +24,15 @@ Prerequisites:
 2. Clone the Git repository containing the Flask application and Docker configurations.
 3. Change into the project directory using the following command:
 
-      #sudo git clone https://github.com/V374R/DevOps-Task-1.git
-      #cd DevOps-Task-1
+      $sudo git clone https://github.com/V374R/DevOps-Task-1.git
+      $cd DevOps-Task-1
 
 
   Step 2: Create a Virtual Environment:
 
 In the terminal or command prompt, run the following command to create a new virtual environment named "anyting you want", for example "ENV"
 
-      #virtualenv ENV
+      $virtualenv ENV
 
 
   Step 3: Activate the Virtual Environment and install Flask:
@@ -40,31 +40,31 @@ In the terminal or command prompt, run the following command to create a new vir
 To start using the virtual environment, you need to activate it. 
 
 - For Unix/macOS:
-      #source ENV/bin/activate
-      #pip install flask
+      $source ENV/bin/activate
+      $pip install flask
 
 
   Step 4: Build the Docker Image:
 
 1. In the project directory, where the Dockerfile is located, build the Docker image using the following command:
    
-      #sudo docker build -t my_flask_app .
+      $sudo docker build -t my_flask_app .
 
 
   Step 5: Set Up PostgreSQL Data Volume:
 
 1. Create a directory on the target machine to serve as the data volume:
 
-      #sudo mkdir -p /home/data1
-      #sudo chown -R <your username>:<your username> /home/data1
+      $sudo mkdir -p /home/data1
+      $sudo chown -R $Username:$Username /home/data1
 
 2. Modify the docker-compose.yml file to use a newly created directory as the data volume for the PostgreSQL container. Replace /home/data1 with the actual path you want to create.
 
 
   Step 6: Run the Docker and Postgres containers:
 
-      #sudo chmod +x ./flask.sh
-      #sudo ./flask.sh
+      $sudo chmod +x ./flask.sh
+      $sudo ./flask.sh
 
 
   Step 7: Access the Flask Application:

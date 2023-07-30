@@ -39,11 +39,9 @@ setup_postgres() {
 main() {
     check_docker_installed
 
-    # Build and run the Flask application container
     deploy_flask_app
 
     setup_postgres
-
 }
 
 # Call the main function

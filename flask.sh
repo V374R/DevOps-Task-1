@@ -21,12 +21,29 @@ deploy_flask_app() {
 
 
 
+# Function to set up the PostgreSQL container
+setup_postgres() {
+    echo "Setting up the PostgreSQL container..."
+    docker run -d -p 5432:5432 \
+        -e POSTGRES_USER=devops \
+        -e POSTGRES_PASSWORD=Asd12345 \
+        -e POSTGRES_DB=flask-db \
+        -v /home/data1:/var/lib/postgresql/data \
+        --name postgres_container \
+        postgres
+    echo "PostgreSQL container is now running!"
+}
+
+
 # Main deployment function
 main() {
     check_docker_installed
 
     # Build and run the Flask application container
     deploy_flask_app
+
+    setup_postgres
+
 }
 
 # Call the main function

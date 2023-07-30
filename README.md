@@ -10,7 +10,7 @@ Prerequisites:
 3. sure the machine has Docker installed and running.
   #sudo apt install -y docker.io
   #sudo systemctl enable --now docker
-  #sudo usermod -aG docker <your username>
+  #sudo usermod -aG docker $Username
 4. Install python.
    Ensure that Python is installed on your machine. If not, download and install the latest version of Python from the official Python website (https://www.python.org/).
 5. Install Virtualenv:
@@ -30,7 +30,7 @@ Prerequisites:
 
   Step 2: Create a Virtual Environment:
 
-In the terminal or command prompt, run the following command to create a new virtual environment named "<anyting you want>", for example "ENV"
+In the terminal or command prompt, run the following command to create a new virtual environment named "anyting you want", for example "ENV"
 
       #virtualenv ENV
 
